@@ -563,14 +563,14 @@ section {
 
 @media (max-width: 991px) {
     html {
-        width: 80vw;
+        width: 85vw;
     }
     body {
-        width: 80vw;
+        width: 85vw;
     }
 
     .header {
-        width: 80vw;
+        width: 85vw;
         padding: 2rem 3%;
     }
 
@@ -691,6 +691,15 @@ section {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+        width: 88vw;
+    }
+
+    body {
+        width: 88vw;
+    }
+
+    .header {
+        width: 88vw;
     }
 
     .contact form .input-box input {
@@ -699,6 +708,19 @@ section {
 }
 
 @media (max-width: 385px) {
+    html {
+        font-size: 50%;
+        width: 95vw;
+    }
+    
+    body {
+        width: 95vw;
+    }
+
+    .header {
+        width: 95vw;
+    }
+
     section#home {
         height: 150vh;
     }
