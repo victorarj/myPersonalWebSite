@@ -672,12 +672,12 @@ section {
         width: 100%;
     }
 
-    .home-img img {
-        width: 90vw;
+    .home-img {
+        width: 50vw;
     }
 
     .about-img img {
-        width: 50vw;
+        width: 90vw;
     }
 
     .footer {
