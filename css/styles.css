@@ -610,6 +610,10 @@ section {
         margin: 3rem 0;
     }
 
+    section#home {
+        height: 100vh;
+    }
+
     .home {
         flex-direction: column;
     }
@@ -623,7 +627,7 @@ section {
     }
 
     .home-img img {
-        width: 70vw;
+        /* width: 70vw; */
         margin-top: 4rem;
     }
 
@@ -668,18 +672,19 @@ section {
         font-size: 50%;
     }
 
-    section#home {
-        height: 150vh;
-    }
-
     .contact form .input-box input {
         width: 100%;
     }
 }
 
 @media (max-width: 385px) {
+    section#home {
+        height: 150vh;
+    }
+
     .home-img img {
         width: 90vw;
+        height: 90%;
     }
 
     .about-img img {
