@@ -134,9 +134,9 @@ section {
 }
 
 .home-img {
-    /* width: 410px;
-    height: 410px; */
-    width: 35vw;
+    width: 410px;
+    height: 410px;
+    /* width: 35vw; */
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
