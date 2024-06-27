@@ -668,6 +668,10 @@ section {
         font-size: 50%;
     }
 
+    section#home {
+        height: 150vh;
+    }
+
     .contact form .input-box input {
         width: 100%;
     }
