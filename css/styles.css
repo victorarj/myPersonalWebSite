@@ -563,14 +563,14 @@ section {
 
 @media (max-width: 991px) {
     html {
-        width: 85vw;
+        width: 100vw;
     }
     body {
-        width: 85vw;
+        width: 100vw;
     }
 
     .header {
-        width: 85vw;
+        width: 100vw;
         padding: 2rem 3%;
     }
 
@@ -593,14 +593,14 @@ section {
 
 @media (max-width: 768px) {
     html {
-        width: 80vw;
+        width: 95vw;
     }
     body {
-        width: 80vw;
+        width: 95vw;
     }
 
     .header {
-        width: 80vw;
+        width: 95vw;
     }
 
     #menu-icon {
@@ -621,7 +621,7 @@ section {
 
     .navbar.active {
         display: block;
-        width: 80vw;
+        width: 95vw;
     }
 
     .navbar a {
@@ -702,6 +702,10 @@ section {
         width: 88vw;
     }
 
+    .navbar.active {
+        width: 88vw;
+    }
+
     .contact form .input-box input {
         width: 100%;
     }
@@ -721,13 +725,18 @@ section {
         width: 95vw;
     }
 
+    .navbar.active {
+        width: 95vw;
+    }
+
     section#home {
         height: 150vh;
     }
 
-    .home-img img {
-        width: 90vw;
-        height: 90%;
+    .home-img {
+        width: 390px;
+        height: 390px;
+        margin: auto;
     }
 
     .about-img img {
