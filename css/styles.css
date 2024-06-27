@@ -133,7 +133,7 @@ section {
     animation-delay: 1s;
 }
 
-.home-img {
+.home .home-img {
     width: 410px;
     height: 410px;
     /* width: 35vw; */
@@ -673,7 +673,7 @@ section {
     }
 
     .home-img {
-        width: 50vw;
+        width: 90vw;
     }
 
     .about-img img {
