@@ -24,12 +24,12 @@ html {
 }
 
 body {
-    background: #1f242d;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 section {
-    min-height: 100%;
+    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
@@ -38,7 +38,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 26px 9%;
+    padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@ section {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 2.5rem;
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
@@ -62,11 +62,11 @@ section {
 
 .navbar a {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.7rem;
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 4rem;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;  
@@ -100,7 +100,7 @@ section {
 }
 
 .home-content h3 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
@@ -243,7 +243,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25rem;
+    gap: 2rem;
     background: var(--second-bg-color);
 }
 
@@ -253,7 +253,7 @@ section {
 
 .heading {
     text-align: center;
-    font-size: 72px;
+    font-size: 4.5rem;
 }
 
 .heading span {
@@ -266,20 +266,17 @@ section {
 }
 
 .about-content h3 {
-    font-size: 40px;
+    font-size: 2.6rem;
     /* font-weight: 700; */
 }
 
 .about-content p {
-    font-size: 24px;
-    margin: 32px 0 48px;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
 }
 
-.services {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 80px;
+.services h2 {
+    margin-bottom: 5rem;
 }
 
 .services-container {
@@ -287,16 +284,16 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 2rem;
 }
 
 .services-container .services-box {
-    flex: 1 1 40rem;
+    flex: 1 1 30rem;
     background: var(--second-bg-color);
-    padding: 48px 32px 64px;
-    border-radius: 32px;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
     text-align: center;
-    border: 3.2px solid var(--bg-color);
+    border: .2rem solid var(--bg-color);
     transition: .5s ease;
 }
 
@@ -306,17 +303,17 @@ section {
 }
 
 .services-box i {
-    font-size: 100px;
+    font-size: 7rem;
     color: var(--main-color);
 }
 
 .services-box h3 {
-    font-size: 28px;
+    font-size: 2.6rem;
 }
 
 .services-box p {
-    font-size: 16px;
-    margin: 1px 0 48px;
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
 }
 
 .portfolio {
