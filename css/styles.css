@@ -584,6 +584,17 @@ section {
 }
 
 @media (max-width: 768px) {
+    html {
+        width: 80vw;
+    }
+    body {
+        width: 80vw;
+    }
+
+    header {
+        width: 80vw;
+    }
+
     #menu-icon {
         display: block;
     }
@@ -611,7 +622,7 @@ section {
     }
 
     section#home {
-        height: 100vh;
+        height: 135vh;
     }
 
     .home {
@@ -626,9 +637,10 @@ section {
         font-size: 5rem;
     }
 
-    .home-img img {
-        /* width: 70vw; */
-        margin-top: 4rem;
+    .home-img {
+        width: 390px;
+        height: 390px;
+        margin: auto;
     }
 
     .about {
