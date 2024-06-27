@@ -1,5 +1,3 @@
-/* Existing imports and root styles */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -29,8 +27,6 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
-
-/* Sections and Header */
 
 section {
     min-height: 100vh;
@@ -64,8 +60,6 @@ section {
     animation: slideRight 1s ease forwards;
 }
 
-/* Navbar and Home Section */
-
 .navbar a {
     display: inline-block;
     font-size: 1.7rem;
@@ -75,7 +69,7 @@ section {
     margin-left: 4rem;
     transition: .3s;
     opacity: 0;
-    animation: slideTop .5s ease forwards;
+    animation: slideTop .5s ease forwards;  
     animation-delay: calc(.2s * var(--i));
 }
 
@@ -124,7 +118,7 @@ section {
 }
 
 .home-content h1 {
-    font-size: 5.6rem;
+    font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
     opacity: 0;
@@ -133,7 +127,7 @@ section {
 }
 
 .home-content p {
-    font-size: 1.6rem;
+    font-size: 16px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
@@ -142,6 +136,7 @@ section {
 .home-img {
     width: 410px;
     height: 410px;
+    /* width: 35vw; */
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
@@ -194,6 +189,7 @@ section {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    /* top: 10px; */
 }
 
 .social-media a {
@@ -205,10 +201,10 @@ section {
     background: transparent;
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 20px;
     color: var(--main-color);
     text-decoration: none;
-    margin: 2rem 1.5rem 3rem 0;
+    margin: 20px 15px 30px 0;
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -223,11 +219,11 @@ section {
 
 .btn {
     display: inline-block;
-    padding: 1.2rem 2.8rem;
+    padding: 12px 28px;
     background: var(--main-color);
-    border-radius: 4rem;
+    border-radius: 40px;
     box-shadow: 0 0 10px var(--main-color);
-    font-size: 1.6rem;
+    font-size: 16px;
     color: var(--second-bg-color);
     letter-spacing: 1px;
     text-decoration: none;
@@ -240,8 +236,6 @@ section {
 .btn:hover {
     box-shadow: none;
 }
-
-/* About Section */
 
 .about {
     position: relative;
@@ -274,14 +268,13 @@ section {
 
 .about-content h3 {
     font-size: 2.6rem;
+    /* font-weight: 700; */
 }
 
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-
-/* Services Section */
 
 .services h2 {
     margin-bottom: 5rem;
@@ -324,8 +317,6 @@ section {
     margin: 1rem 0 3rem;
 }
 
-/* Portfolio Section */
-
 .portfolio {
     background: var(--second-bg-color);
 }
@@ -360,21 +351,23 @@ section {
 
 .portfolio-box .portfolio-layer {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, .6);
-    padding: 2rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
     transition: .5s ease;
-    opacity: 0;
 }
 
 .portfolio-box:hover .portfolio-layer {
-    opacity: 1;
+    transform: translateY(0);
 }
 
 .portfolio-layer h4 {
@@ -383,107 +376,231 @@ section {
 
 .portfolio-layer p {
     font-size: 1.6rem;
-    margin: 1rem 0 2rem;
+    margin: .3rem 0 1rem;
 }
 
 .portfolio-layer a {
-    display: inline-block;
-    padding: 1.2rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 10px var(--main-color);
-    font-size: 1.6rem;
-    color: var(--second-bg-color);
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .5s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
 }
 
-/* Contact Section */
-
-.contact {
-    text-align: center;
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
 }
 
 .contact h2 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.contact p {
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
     font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
 }
 
-.contact-form {
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.contact-form .input-box {
-    flex: 1 1 35rem;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.input-box input {
-    width: 100%;
-    padding: 1.6rem 2rem;
+    padding: 2rem 9%;
     background: var(--second-bg-color);
-    color: var(--text-color);
+}
+
+.footer-text p {
     font-size: 1.6rem;
-    border-radius: .5rem;
 }
 
-.input-box input::placeholder {
-    color: #aaa;
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
 }
 
-textarea {
-    flex: 1 1 100%;
-    padding: 1.6rem 2rem;
-    background: var(--second-bg-color);
-    color: var(--text-color);
-    font-size: 1.6rem;
-    border-radius: .5rem;
-    resize: none;
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
-textarea::placeholder {
-    color: #aaa;
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
 }
 
-.contact-form .btn {
-    margin-top: 1.5rem;
+/* KEYFRAMES ANIMATION */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-/* Media Queries */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes circleRotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* BRAKPOINTS */
 
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
-
-    .about-image img {
-        width: 45vw;
-    }
-
-    .about-content h2 {
-        font-size: 3.6rem;
-    }
-
-    .about-content h3 {
-        font-size: 2.2rem;
-    }
 }
 
 @media (max-width: 991px) {
-    .navbar a {
-        margin-left: 2rem;
+    html {
+        width: 100vw;
+    }
+    body {
+        width: 100vw;
+    }
+
+    .header {
+        width: 100vw;
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        width: 95vw;
+    }
+    body {
+        width: 95vw;
+    }
+
+    .header {
+        width: 95vw;
     }
 
     #menu-icon {
@@ -495,169 +612,143 @@ textarea::placeholder {
         top: 100%;
         left: 0;
         width: 100%;
+        padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(255, 255, 255, .1);
-        transition: .5s;
-        transform: translateY(-100%);
-        opacity: 0;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
     }
 
     .navbar.active {
-        transform: translateY(0);
-        opacity: 1;
+        display: block;
+        width: 95vw;
     }
 
     .navbar a {
         display: block;
-        margin: 1.5rem;
-        padding: 1.5rem;
-        border-top: .1rem solid rgba(255, 255, 255, .1);
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    section#home {
+        height: 135vh;
     }
 
     .home {
         flex-direction: column;
-        padding: 10% 2%;
     }
 
-    .home-content h3,
-    .home-content h1,
-    .home-content p {
-        text-align: center;
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
     }
 
     .home-img {
-        width: 350px;
-        height: 350px;
+        width: 390px;
+        height: 390px;
+        margin: auto;
     }
 
     .about {
-        flex-direction: column;
-        padding: 10% 2%;
+        flex-direction: column-reverse;
     }
 
-    .about-image img {
-        width: 80%;
+    .about-image {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .services h2 {
         margin-bottom: 3rem;
     }
 
-    .about-content h2 {
-        text-align: center;
+    .portfolio h2 {
+        margin-bottom: 3rem;
     }
 
-    .about-content p {
-        text-align: center;
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .services-container {
-        flex-direction: column;
+    .contact {
+        min-height: auto;
     }
 
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+        width: 88vw;
+    }
+
+    body {
+        width: 88vw;
+    }
+
     .header {
-        padding: 1rem 5%;
+        width: 88vw;
     }
 
-    .home-content h1 {
-        font-size: 4rem;
+    .navbar.active {
+        width: 88vw;
     }
 
-    .home-content h3 {
-        font-size: 2.8rem;
-    }
-
-    .services-container .services-box {
-        padding: 2rem;
-    }
-
-    .portfolio h2 {
-        font-size: 3rem;
-    }
-
-    .portfolio-layer h4 {
-        font-size: 2.2rem;
-    }
-
-    .contact h2 {
-        font-size: 3rem;
-    }
-
-    .contact-form .input-box {
-        flex: 1 1 100%;
-    }
-
-    .contact-form textarea {
-        height: 15rem;
-    }
-
-    .contact-form .btn {
-        margin-top: 2rem;
+    .contact form .input-box input {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 385px) {
     html {
         font-size: 50%;
+        width: 95vw;
+    }
+    
+    body {
+        width: 95vw;
     }
 
     .header {
-        padding: 1rem 2%;
+        width: 95vw;
     }
 
-    .home-content h1 {
-        font-size: 3.2rem;
+    .navbar.active {
+        width: 95vw;
     }
 
-    .home-content h3 {
-        font-size: 2.4rem;
-    }
-
-    .home-content p {
-        font-size: 1.4rem;
+    section#home {
+        height: 150vh;
     }
 
     .home-img {
-        width: 300px;
-        height: 300px;
+        width: 390px;
+        height: 390px;
+        margin: auto;
     }
 
-    .about-image img {
-        width: 90%;
+    .about-img img {
+        width: 90vw;
     }
 
-    .about-content h2 {
-        font-size: 2.8rem;
+    .footer {
+        flex-direction: column-reverse;
     }
 
-    .about-content p {
-        font-size: 1.4rem;
-    }
-
-    .services-container .services-box {
-        padding: 1.5rem;
-    }
-
-    .services-box h3 {
-        font-size: 2rem;
-    }
-
-    .services-box p {
-        font-size: 1.4rem;
-    }
-
-    .portfolio-layer h4 {
-        font-size: 2rem;
-    }
-
-    .contact h2 {
-        font-size: 2.8rem;
-    }
-
-    .contact p {
-        font-size: 1.4rem;
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
     }
 }
