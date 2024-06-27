@@ -562,7 +562,15 @@ section {
 }
 
 @media (max-width: 991px) {
+    html {
+        width: 80vw;
+    }
+    body {
+        width: 80vw;
+    }
+
     .header {
+        width: 80vw;
         padding: 2rem 3%;
     }
 
@@ -613,6 +621,7 @@ section {
 
     .navbar.active {
         display: block;
+        width: 80vw;
     }
 
     .navbar a {
