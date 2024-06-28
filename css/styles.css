@@ -24,12 +24,12 @@ html {
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: #1f242d;
+    color: #fff;
 }
 
 section {
-    min-height: 100vh;
+    min-height: 100%;
     padding: 10rem 9% 2rem;
 }
 
@@ -38,7 +38,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 26px 9%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@ section {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 25px;
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
@@ -62,11 +62,11 @@ section {
 
 .navbar a {
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 18px;
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 4rem;
+    margin-left: 35px;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;  
@@ -100,7 +100,7 @@ section {
 }
 
 .home-content h3 {
-    font-size: 3.2rem;
+    font-size: 32px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
@@ -136,7 +136,6 @@ section {
 .home-img {
     width: 410px;
     height: 410px;
-    /* width: 35vw; */
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
@@ -244,7 +243,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 25rem;
     background: var(--second-bg-color);
 }
 
@@ -254,7 +253,7 @@ section {
 
 .heading {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 72px;
 }
 
 .heading span {
@@ -267,17 +266,20 @@ section {
 }
 
 .about-content h3 {
-    font-size: 2.6rem;
+    font-size: 40px;
     /* font-weight: 700; */
 }
 
 .about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    font-size: 24px;
+    margin: 32px 0 48px;
 }
 
-.services h2 {
-    margin-bottom: 5rem;
+.services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 80px;
 }
 
 .services-container {
@@ -285,16 +287,16 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 32px;
 }
 
 .services-container .services-box {
-    flex: 1 1 30rem;
+    flex: 1 1 40rem;
     background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
+    padding: 48px 32px 64px;
+    border-radius: 32px;
     text-align: center;
-    border: .2rem solid var(--bg-color);
+    border: 3.2px solid var(--bg-color);
     transition: .5s ease;
 }
 
@@ -304,17 +306,17 @@ section {
 }
 
 .services-box i {
-    font-size: 7rem;
+    font-size: 100px;
     color: var(--main-color);
 }
 
 .services-box h3 {
-    font-size: 2.6rem;
+    font-size: 28px;
 }
 
 .services-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    font-size: 16px;
+    margin: 1px 0 48px;
 }
 
 .portfolio {
@@ -562,15 +564,7 @@ section {
 }
 
 @media (max-width: 991px) {
-    html {
-        width: 100vw;
-    }
-    body {
-        width: 100vw;
-    }
-
     .header {
-        width: 100vw;
         padding: 2rem 3%;
     }
 
@@ -592,17 +586,6 @@ section {
 }
 
 @media (max-width: 768px) {
-    html {
-        width: 95vw;
-    }
-    body {
-        width: 95vw;
-    }
-
-    .header {
-        width: 95vw;
-    }
-
     #menu-icon {
         display: block;
     }
@@ -621,17 +604,12 @@ section {
 
     .navbar.active {
         display: block;
-        width: 95vw;
     }
 
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-    }
-
-    section#home {
-        height: 135vh;
     }
 
     .home {
@@ -646,10 +624,9 @@ section {
         font-size: 5rem;
     }
 
-    .home-img {
-        width: 390px;
-        height: 390px;
-        margin: auto;
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
     }
 
     .about {
@@ -691,19 +668,6 @@ section {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
-        width: 95vw;
-    }
-
-    body {
-        width: 95vw;
-    }
-
-    .header {
-        width: 95vw;
-    }
-
-    .navbar.active {
-        width: 95vw;
     }
 
     .contact form .input-box input {
@@ -711,32 +675,10 @@ section {
     }
 }
 
-@media (max-width: 385px) {
-    html {
-        font-size: 50%;
-        width: 95vw;
-    }
-    
-    body {
-        width: 95vw;
-    }
-
-    .header {
-        width: 95vw;
-    }
-
-    .navbar.active {
-        width: 95vw;
-    }
-
-    section#home {
-        height: 150vh;
-    }
-
+@media (max-width: 365px) {
     .home-img {
         width: 300px;
         height: 300px;
-        margin: auto;
     }
 
     .about-img img {
