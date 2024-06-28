@@ -691,19 +691,19 @@ section {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
-        width: 100vw;
+        width: 110vw;
     }
 
     body {
-        width: 100vw;
+        width: 110vw;
     }
 
     .header {
-        width: 100vw;
+        width: 110vw;
     }
 
     .navbar.active {
-        width: 100vw;
+        width: 110vw;
     }
 
     .contact form .input-box input {
@@ -722,7 +722,7 @@ section {
     }
 
     .about-img img {
-        width: 90vw;
+        width: 90%;
     }
 
     .footer {
