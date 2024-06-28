@@ -51,5 +51,45 @@ ScrollReveal().reveal('.home-image, .services-container, .portfolio-box, .contac
 ScrollReveal().reveal('.home-content h1, .about-image', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
+document.getElementById('contactForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch('/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            showSuccessMessage();
+        } else {
+            console.error('Error submitting form:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+    }
+});
+
+function showSuccessMessage() {
+    const successMessage = document.getElementById('successMessage');
+    successMessage.classList.remove('slide-out');
+    successMessage.classList.add('slide-in');
+    successMessage.value = 'Message Sent!';
+    
+    setTimeout(() => {
+        successMessage.classList.remove('slide-in');
+        successMessage.classList.add('slide-out');
+        successMessage.value = 'Send Message';
+    }, 3000); // Hide after 3 seconds 
+}
+
+
 
 

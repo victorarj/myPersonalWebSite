@@ -435,6 +435,14 @@ section {
     cursor: pointer;
 }
 
+.contact form .btn.slide-out {
+    animation: slideRight 1s ease forwards;
+}
+
+.contact form .btn.slide-in {
+    animation: slideRightReverse 2.5s ease forwards;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -478,6 +486,18 @@ section {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@keyframes slideRightReverse {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
     }
 }
 
