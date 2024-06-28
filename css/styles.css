@@ -554,15 +554,53 @@ section {
 }
 
 /* BRAKPOINTS */
+
 @media (max-width: 1200px) {
-    .home-content h1 {
-        font-size: 4.5rem;
+    html {
+        font-size: 55%;
     }
 }
 
 @media (max-width: 991px) {
-    .navbar a {
-        margin-left: 2rem;
+    html {
+        width: 100vw;
+    }
+    body {
+        width: 100vw;
+    }
+
+    .header {
+        width: 100vw;
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        width: 95vw;
+    }
+    body {
+        width: 95vw;
+    }
+
+    .header {
+        width: 95vw;
     }
 
     #menu-icon {
@@ -574,163 +612,143 @@ section {
         top: 100%;
         left: 0;
         width: 100%;
+        padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(255, 255, 255, .1);
-        transition: .5s;
-        transform: translateY(-100%);
-        opacity: 0;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
     }
 
     .navbar.active {
-        transform: translateY(0);
-        opacity: 1;
+        display: block;
+        width: 95vw;
     }
 
     .navbar a {
         display: block;
-        margin: 1.5rem;
-        padding: 1.5rem;
-        border-top: .1rem solid rgba(255, 255, 255, .1);
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    section#home {
+        height: 135vh;
     }
 
     .home {
         flex-direction: column;
-        padding: 70px 5%;
     }
 
-    .home-content {
-        text-align: center;
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
     }
 
     .home-img {
-        width: 350px;
-        height: 350px;
+        width: 390px;
+        height: 390px;
+        margin: auto;
     }
 
     .about {
-        flex-direction: column;
-        padding: 70px 5%;
+        flex-direction: column-reverse;
     }
 
-    .about-image img {
-        width: 80%;
+    .about-image {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .services h2 {
         margin-bottom: 3rem;
     }
 
-    .about-content {
-        text-align: center;
+    .portfolio h2 {
+        margin-bottom: 3rem;
     }
 
-    .services-container {
-        flex-direction: column;
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+        width: 88vw;
+    }
+
+    body {
+        width: 88vw;
+    }
+
     .header {
-        padding: 1rem 5%;
+        width: 88vw;
     }
 
-    .home-content h1 {
-        font-size: 4rem;
+    .navbar.active {
+        width: 88vw;
     }
 
-    .home-content h3 {
-        font-size: 2.8rem;
-    }
-
-    .services-container .services-box {
-        padding: 2rem;
-    }
-
-    .portfolio h2 {
-        font-size: 3rem;
-    }
-
-    .portfolio-layer h4 {
-        font-size: 2.2rem;
-    }
-
-    .contact h2 {
-        font-size: 3rem;
-    }
-
-    .contact-form .input-box {
-        flex: 1 1 100%;
-    }
-
-    .contact-form textarea {
-        height: 15rem;
-    }
-
-    .contact-form .btn {
-        margin-top: 2rem;
+    .contact form .input-box input {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 385px) {
     html {
         font-size: 50%;
+        width: 95vw;
+    }
+    
+    body {
+        width: 95vw;
     }
 
     .header {
-        padding: 1rem 2%;
+        width: 95vw;
     }
 
-    .home-content h1 {
-        font-size: 3.2rem;
+    .navbar.active {
+        width: 95vw;
     }
 
-    .home-content h3 {
-        font-size: 2.4rem;
-    }
-
-    .home-content p {
-        font-size: 1.4rem;
+    section#home {
+        height: 150vh;
     }
 
     .home-img {
         width: 300px;
         height: 300px;
+        margin: auto;
     }
 
-    .about-image img {
-        width: 90%;
+    .about-img img {
+        width: 90vw;
     }
 
-    .about-content h2 {
-        font-size: 2.8rem;
+    .footer {
+        flex-direction: column-reverse;
     }
 
-    .about-content p {
-        font-size: 1.4rem;
-    }
-
-    .services-container .services-box {
-        padding: 1.5rem;
-    }
-
-    .services-box h3 {
-        font-size: 2rem;
-    }
-
-    .services-box p {
-        font-size: 1.4rem;
-    }
-
-    .portfolio-layer h4 {
-        font-size: 2rem;
-    }
-
-    .contact h2 {
-        font-size: 2.8rem;
-    }
-
-    .contact p {
-        font-size: 1.4rem;
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
     }
 }
