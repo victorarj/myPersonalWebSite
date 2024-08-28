@@ -124,8 +124,8 @@ downloadBtn.addEventListener('click', function() {
     event.preventDefault();
     const link = document.createElement('a');
     
-    link.href = 'resources/CV Victor Araujo.pptx';
-    link.download = 'CV Victor Araujo.pptx';
+    link.href = 'resources/CV_Victor Araujo.pdf';
+    link.download = 'CV_Victor Araujo.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
