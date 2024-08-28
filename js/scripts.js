@@ -117,3 +117,16 @@ function showSuccessMessage() {
         successMessage.value = 'Send Message';
     }, 3000); // Hide after 3 seconds 
 }
+
+const downloadBtn = document.getElementById('download-btn');
+
+downloadBtn.addEventListener('click', function() {
+    const link = document.createElement('a');
+    
+    link.href = 'resources/CV Victor Araujo.pptx';
+    link.download = 'CV Victor Araujo.pptx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
