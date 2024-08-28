@@ -51,7 +51,35 @@ ScrollReveal().reveal('.home-image, .services-container, .portfolio-box, .contac
 ScrollReveal().reveal('.home-content h1, .about-image', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-document.getElementById('contactForm').addEventListener('submit', async function (event) {
+(function(){
+    emailjs.init("rZjGYCkQbegxmWqbv"); // Replace with your actual user_id
+})();
+
+// Function to handle form submission
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Collect form data
+  var templateParams = {
+      fName: document.getElementsByName('fullName')[0].value,
+      lName: document.getElementsByName('email')[0].value,
+      mNumber: document.getElementsByName('mobileNumber')[0].value,
+      eAddress: document.getElementsByName('emailSubject')[0].value,
+      message: document.getElementsByName('message')[0].value
+  };
+
+  // Send the email using EmailJS
+  emailjs.send('service_0x7wjnz', 'template_k9pckhu', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert('Your message has been sent successfully!');
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert('Failed to send your message. Please try again.');
+    });
+});
+
+/* document.getElementById('contactForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const form = event.target;
@@ -75,7 +103,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     } catch (error) {
         console.error('Error submitting form:', error);
     }
-});
+}); */
 
 function showSuccessMessage() {
     const successMessage = document.getElementById('successMessage');
@@ -89,7 +117,3 @@ function showSuccessMessage() {
         successMessage.value = 'Send Message';
     }, 3000); // Hide after 3 seconds 
 }
-
-
-
-
