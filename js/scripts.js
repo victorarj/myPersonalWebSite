@@ -121,6 +121,7 @@ function showSuccessMessage() {
 const downloadBtn = document.getElementById('download-btn');
 
 downloadBtn.addEventListener('click', function() {
+    event.preventDefault();
     const link = document.createElement('a');
     
     link.href = 'resources/CV Victor Araujo.pptx';
