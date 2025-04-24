@@ -231,6 +231,7 @@ section {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
+    cursor: pointer; /* Added for better UX */
 }
 
 .btn:hover {
@@ -600,7 +601,10 @@ section {
         font-size: 4rem;
     }
 
-    .home-content p {
+    .home-content p,
+    .about-content p,
+    .contact form .input-box input,
+    .contact form textarea {
         font-size: 1.4rem;
     }
 
@@ -613,10 +617,6 @@ section {
         font-size: 2.4rem;
     }
 
-    .about-content p {
-        font-size: 1.4rem;
-    }
-
     .services-container {
         flex-direction: column;
         gap: 3rem;
@@ -624,11 +624,6 @@ section {
 
     .portfolio-container {
         grid-template-columns: 1fr;
-    }
-
-    .contact form .input-box input,
-    .contact form textarea {
-        font-size: 1.4rem;
     }
 
     .footer {

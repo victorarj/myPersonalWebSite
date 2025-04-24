@@ -33,7 +33,7 @@ window.onscroll = () => {
     });
 
     let header = document.querySelector('header');
-    header.classList.toogle('sticky', window.scrollY > 100);
+    header.classList.toggle('sticky', window.scrollY > 100);
 
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
@@ -120,10 +120,9 @@ function showSuccessMessage() {
 
 const downloadBtn = document.getElementById('download-btn');
 
-downloadBtn.addEventListener('click', function() {
+downloadBtn.addEventListener('click', function(event) {
     event.preventDefault();
     const link = document.createElement('a');
-    
     link.href = 'resources/Victor Araujo - Salesforce Developer.pdf';
     link.download = 'Victor Araujo - Salesforce Developer.pdf';
     document.body.appendChild(link);
@@ -137,10 +136,10 @@ function checkScreenSize() {
 
     if (screenWidth <= 768) {
         console.log("Mobile view detected");
-        // Add any specific behavior for mobile view here
+        // Add specific mobile behavior here
     } else {
         console.log("Desktop view detected");
-        // Add any specific behavior for desktop view here
+        // Add specific desktop behavior here
     }
 }
 
