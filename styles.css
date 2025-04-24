@@ -231,7 +231,6 @@ section {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    cursor: pointer; /* Added for better UX */
 }
 
 .btn:hover {
@@ -580,6 +579,22 @@ section {
     html {
         font-size: 55%;
     }
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .services-container {
+        gap: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        padding: 2rem 5%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -592,34 +607,48 @@ section {
         align-items: flex-start;
     }
 
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: var(--bg-color);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
     .navbar a {
-        font-size: 1.6rem;
+        display: block;
+        font-size: 1.8rem;
         margin: 2rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
     }
 
     .home-content h1 {
         font-size: 4rem;
     }
 
-    .home-content p,
-    .about-content p,
-    .contact form .input-box input,
-    .contact form textarea {
-        font-size: 1.4rem;
-    }
-
     .home-img {
         width: 300px;
         height: 300px;
+        margin: 2rem auto;
     }
 
-    .about-content h2 {
-        font-size: 2.4rem;
-    }
-
-    .services-container {
+    .about {
         flex-direction: column;
-        gap: 3rem;
+    }
+
+    .about-image {
+        width: 80%;
+        margin: 2rem auto;
     }
 
     .portfolio-container {

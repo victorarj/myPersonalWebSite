@@ -135,10 +135,13 @@ function checkScreenSize() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 768) {
-        console.log("Mobile view detected");
+        console.log("Mobile view detected (<= 768px)");
         // Add specific mobile behavior here
+    } else if (screenWidth <= 1200) {
+        console.log("Tablet view detected (<= 1200px)");
+        // Add specific tablet behavior here
     } else {
-        console.log("Desktop view detected");
+        console.log("Desktop view detected (> 1200px)");
         // Add specific desktop behavior here
     }
 }
