@@ -656,6 +656,7 @@ section {
     .home-img .glowing-circle {
         width: 60%;
         height: 60%;
+        left: 30px;
     }
     
     .home-img .glowing-circle::after {
