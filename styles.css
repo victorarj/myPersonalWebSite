@@ -573,8 +573,7 @@ section {
     }
 }
 
-/* BRAKPOINTS */
-
+/* Media Query for Tablets (max-width: 1200px) */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -597,6 +596,7 @@ section {
     }
 }
 
+/* Media Query for Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
     html {
         font-size: 50%;
@@ -611,7 +611,7 @@ section {
         width: 90%;
     }
 
-    #menu-icon {
+    .bx-menu {
         display: block;
     }
 

@@ -1,13 +1,17 @@
-var typed = new Typed(".multiple-text", {
-    strings: ["Salesforce Developer", "Electrical Engineer", "Solutions Architect"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
+try {
+    const typed = new Typed(".multiple-text", {
+        strings: ["Salesforce Developer", "Electrical Engineer", "Solutions Architect"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+} catch (error) {
+    console.error("Error initializing Typed.js:", error);
+}
 
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
