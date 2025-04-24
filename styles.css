@@ -608,7 +608,7 @@ section {
 
     .header {
         align-items: flex-start;
-        width: 90%;
+        width: 100%;
     }
 
     #menu-icon {
@@ -638,6 +638,7 @@ section {
     .home {
         flex-direction: column;
         text-align: center;
+        height: 100%;
     }
 
     .home-content h1 {
@@ -652,6 +653,7 @@ section {
 
     .about {
         flex-direction: column;
+        height: 100%;
     }
 
     .about-image {
