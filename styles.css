@@ -150,6 +150,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .home-img .glowing-circle::after {
@@ -168,6 +169,8 @@ section {
     background: linear-gradient(#0ef, #1f242d);
     border-radius: 50%;
     animation: circleRotate 5s linear infinite;
+    pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+    will-change: transform;
 }
 
 .glowing-circle span:nth-child(1) {
