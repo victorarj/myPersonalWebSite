@@ -611,8 +611,8 @@ section {
         width: 90%;
     }
 
-    .bx-menu {
-        display: block;
+    #menu-icon {
+        display: inline-block;
     }
 
     .navbar {
