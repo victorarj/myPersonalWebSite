@@ -613,121 +613,83 @@ section {
 
 @media (max-width: 768px) {
     html {
-        width: 95vw;
-    }
-    body {
-        width: 95vw;
+        font-size: 50%;
     }
 
     .header {
-        width: 95vw;
-    }
-
-    #menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        display: none;
-    }
-
-    .navbar.active {
-        display: block;
-        width: 95vw;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    section#home {
-        height: 135vh;
-    }
-
-    .home {
-        flex-direction: column;
-    }
-
-    .home-content h3 {
-        font-size: 2.6rem;
+        font-size: 1.6rem;
+        margin: 2rem 0;
     }
 
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 4rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
     }
 
     .home-img {
-        width: 390px;
-        height: 390px;
-        margin: auto;
+        width: 300px;
+        height: 300px;
     }
 
-    .about {
+    .about-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .about-content p {
+        font-size: 1.4rem;
+    }
+
+    .services-container {
         flex-direction: column;
-    }
-
-    .about-image {
-        width: 80%;
-        margin-top: 4rem;
-    }
-
-    .services h2 {
-        margin-bottom: 3rem;
-    }
-
-    .portfolio h2 {
-        margin-bottom: 3rem;
+        gap: 3rem;
     }
 
     .portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
-    .contact {
-        min-height: auto;
+    .contact form .input-box input,
+    .contact form textarea {
+        font-size: 1.4rem;
     }
 
     .footer {
-        padding: 2rem 3%;
+        flex-direction: column;
+        text-align: center;
     }
-}
 
-@media (max-width: 617px) {
-    .portfolio-container {
-        grid-template-columns: 1fr;
+    .footer-text p {
+        margin-top: 1rem;
     }
 }
 
 @media (max-width: 450px) {
-    html {
-        font-size: 50%;
-        width: 110vw;
+    .home-content h1 {
+        font-size: 3.5rem;
     }
 
-    body {
-        width: 110vw;
+    .home-content p {
+        font-size: 1.2rem;
     }
 
-    .header {
-        width: 110vw;
+    .about-content h2 {
+        font-size: 2rem;
     }
 
-    .navbar.active {
-        width: 110vw;
+    .about-content p {
+        font-size: 1.2rem;
     }
 
-    .contact form .input-box input {
-        width: 100%;
+    .footer-text p {
+        font-size: 1.2rem;
     }
 }
 
