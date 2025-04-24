@@ -131,3 +131,20 @@ downloadBtn.addEventListener('click', function() {
     document.body.removeChild(link);
 });
 
+// Function to check screen size and adjust behavior
+function checkScreenSize() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 768) {
+        console.log("Mobile view detected");
+        // Add any specific behavior for mobile view here
+    } else {
+        console.log("Desktop view detected");
+        // Add any specific behavior for desktop view here
+    }
+}
+
+// Call the function on page load and on window resize
+checkScreenSize();
+window.addEventListener('resize', checkScreenSize);
+

@@ -581,36 +581,6 @@ section {
     }
 }
 
-@media (max-width: 991px) {
-    html {
-        width: 100vw;
-    }
-    body {
-        width: 100vw;
-    }
-
-    .header {
-        width: 100vw;
-        padding: 2rem 3%;
-    }
-
-    section {
-        padding: 10rem 3% 2rem;
-    }
-
-    .services {
-        padding-bottom: 7rem;
-    }
-
-    .portfolio {
-        padding-bottom: 7rem;
-    }
-
-    .footer {
-        padding: 2rem 3%;
-    }
-}
-
 @media (max-width: 768px) {
     html {
         font-size: 50%;
@@ -668,51 +638,5 @@ section {
 
     .footer-text p {
         margin-top: 1rem;
-    }
-}
-
-@media (max-width: 450px) {
-    .home-content h1 {
-        font-size: 3.5rem;
-    }
-
-    .home-content p {
-        font-size: 1.2rem;
-    }
-
-    .about-content h2 {
-        font-size: 2rem;
-    }
-
-    .about-content p {
-        font-size: 1.2rem;
-    }
-
-    .footer-text p {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 390px) {
-    section#home {
-        height: 150vh;
-    }
-
-    .home-img {
-        width: 300px;
-        height: 300px;
-    }
-
-    .about-img img {
-        width: 90%;
-    }
-
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer p {
-        text-align: center;
-        margin-top: 2rem;
     }
 }
