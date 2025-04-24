@@ -169,7 +169,7 @@ section {
     background: linear-gradient(#0ef, #1f242d);
     border-radius: 50%;
     animation: circleRotate 5s linear infinite;
-    pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+    pointer-events: none;
     will-change: transform;
 }
 
@@ -651,6 +651,25 @@ section {
     .home-img {
         margin-top: 6rem;
         padding: 1rem;
+    }
+    
+    .home-img .glowing-circle {
+        width: 60%;
+        height: 60%;
+    }
+    
+    .home-img .glowing-circle::after {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .glowing-circle .image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .image img {
+        max-width: 220px;
     }
 
     .about {
