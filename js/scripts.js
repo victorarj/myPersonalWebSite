@@ -1,6 +1,6 @@
 try {
     const typed = new Typed(".multiple-text", {
-        strings: ["Salesforce Developer", "Electrical Engineer", "Solutions Architect"],
+        strings: ["Tech Founder", "Salesforce Developer"],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
