@@ -159,10 +159,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.querySelector(".close-btn");
     const anchorTags = document.querySelectorAll(".portfolio-layer a");
 
+    // Function to update modal content dynamically
+    function updateModalContent(title, content) {
+        const modalTitle = modal.querySelector("h2");
+        const modalContent = modal.querySelector("p");
+        modalTitle.textContent = title;
+        modalContent.textContent = content;
+    }
+
     // Open modal when any anchor tag is clicked
     anchorTags.forEach(anchor => {
         anchor.addEventListener("click", (e) => {
             e.preventDefault(); // Prevent default anchor behavior
+            const title = anchor.parentElement.querySelector("h4").textContent;
+            const content = "This is dynamic content for " + title + ". Customize as needed.";
+            updateModalContent(title, content);
             modal.style.display = "flex";
         });
     });
