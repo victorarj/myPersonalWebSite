@@ -157,7 +157,7 @@ window.addEventListener('resize', checkScreenSize);
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.querySelectorAll(".portfolio-layer .open-modal");
+    const anchorTags = document.querySelectorAll(".portfolio-layer a.open-modal");
 
     // Function to update modal content dynamically
     function updateModalContent(title, content) {
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     anchorTags.forEach(anchor => {
         anchor.addEventListener("click", (e) => {
             e.preventDefault(); // Prevent default anchor behavior
-            const title = anchor.parentElement.querySelector("h4").textContent;
+            const title = anchor.closest(".portfolio-layer").querySelector("h4").textContent;
             const content = "This is dynamic content for " + title + ". Customize as needed.";
             updateModalContent(title, content);
             modal.style.display = "flex";
