@@ -157,7 +157,7 @@ window.addEventListener('resize', checkScreenSize);
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.querySelectorAll(".portfolio-layer a");
+    const anchorTags = document.querySelectorAll(".portfolio-layer .open-modal");
 
     // Function to update modal content dynamically
     function updateModalContent(title, content) {
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modalContent.textContent = content;
     }
 
-    // Open modal when any anchor tag is clicked
+    // Open modal when any anchor tag with the class 'open-modal' is clicked
     anchorTags.forEach(anchor => {
         anchor.addEventListener("click", (e) => {
             e.preventDefault(); // Prevent default anchor behavior
