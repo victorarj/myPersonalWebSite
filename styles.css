@@ -501,6 +501,7 @@ section {
     color: var(--text-color);
     width: 80%;
     max-width: 500px;
+    position: relative;
 }
 
 .close-btn {
