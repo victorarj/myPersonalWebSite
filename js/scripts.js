@@ -153,10 +153,7 @@ function checkScreenSize() {
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.getElementById("open-modal");
-
-    // Debugging: Check if anchorTags are being selected
-    console.log("Anchor tags :", anchorTags);
+    const anchorTags = document.querySelectorAll(".open-modal"); // Use class for multiple anchors
 
     // Function to update modal content dynamically
     function updateModalContent(title, content) {
@@ -166,27 +163,26 @@ document.addEventListener("DOMContentLoaded", () => {
         modalContent.textContent = content;
     }
 
-    // Open modal when any anchor tag is clicked
-    anchorTags.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent default anchorTags behavior
-        const title = anchorTags.closest(".portfolio-layer").querySelector("h4").textContent;
-        const content = "This is dynamic content for " + title + ". Customize as needed.";
-        updateModalContent(title, content);
-        modal.style.display = "flex"; // Show the modal
-        console.log("Modal opened with title:", title); // Debugging
+    // Attach click listener to all anchor tags
+    anchorTags.forEach(anchor => {
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
+            const titleElement = anchor.closest(".portfolio-layer")?.querySelector("h4");
+            const title = titleElement ? titleElement.textContent : "Default Title";
+            const content = "This is dynamic content for " + title + ". Customize as needed.";
+            updateModalContent(title, content);
+            modal.style.display = "flex";
+        });
     });
 
-    // Close modal when the close button is clicked
+    // Close modal logic
     closeBtn.addEventListener("click", () => {
-        modal.style.display = "none"; // Hide the modal
-        console.log("Modal closed"); // Debugging
+        modal.style.display = "none";
     });
 
-    // Close modal when clicking outside the modal content
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
-            modal.style.display = "none"; // Hide the modal
-            console.log("Modal closed by clicking outside"); // Debugging
+            modal.style.display = "none";
         }
     });
 });
