@@ -150,17 +150,15 @@ function checkScreenSize() {
     }
 }
 
-// Call the function on page load and on window resize
-checkScreenSize();
-window.addEventListener('resize', checkScreenSize);
+const openModal = document.getElementById('open-modal');
 
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.querySelectorAll(".portfolio-layer a.open-modal");
+    const anchorTags = document.querySelectorAll(".portfolio-layer a");
 
     // Debugging: Check if anchorTags are being selected
-    console.log("Anchor tags with 'open-modal' class:", anchorTags);
+    console.log("Anchor tags :", anchorTags);
 
     // Function to update modal content dynamically
     function updateModalContent(title, content) {
@@ -170,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modalContent.textContent = content;
     }
 
-    // Open modal when any anchor tag with the class 'open-modal' is clicked
+    // Open modal when any anchor tag is clicked
     anchorTags.forEach(anchor => {
         anchor.addEventListener("click", (e) => {
             e.preventDefault(); // Prevent default anchor behavior
@@ -196,3 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// Call the function on page load and on window resize
+checkScreenSize();
+window.addEventListener('resize', checkScreenSize);
