@@ -167,15 +167,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Open modal when any anchor tag is clicked
-    anchorTags.forEach(anchor => {
-        anchor.addEventListener("click", (e) => {
-            e.preventDefault(); // Prevent default anchor behavior
-            const title = anchor.closest(".portfolio-layer").querySelector("h4").textContent;
-            const content = "This is dynamic content for " + title + ". Customize as needed.";
-            updateModalContent(title, content);
-            modal.style.display = "flex"; // Show the modal
-            console.log("Modal opened with title:", title); // Debugging
-        });
+    anchorTags.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchorTags behavior
+        const title = anchorTags.closest(".portfolio-layer").querySelector("h4").textContent;
+        const content = "This is dynamic content for " + title + ". Customize as needed.";
+        updateModalContent(title, content);
+        modal.style.display = "flex"; // Show the modal
+        console.log("Modal opened with title:", title); // Debugging
     });
 
     // Close modal when the close button is clicked
