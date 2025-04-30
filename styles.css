@@ -517,6 +517,7 @@ section {
     font-size: 2rem;
     color: var(--text-color);
     cursor: pointer;
+    animation: modalHide 0.3s ease forwards;
 }
 
 .services-modal-grid {
@@ -539,6 +540,17 @@ section {
 }
 
 /* KEYFRAMES ANIMATION */
+@keyframes modalHide {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
 @keyframes fadeInBackground {
     0% { background: rgba(0, 0, 0, 0.0); }
     100% { background: rgba(0, 0, 0, 0.8); }
