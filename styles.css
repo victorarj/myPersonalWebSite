@@ -746,4 +746,11 @@ section {
     .footer-text p {
         margin-top: 1rem;
     }
+
+    .services-modal-grid {
+        gap: 5rem;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 500px;
+    }
 }
