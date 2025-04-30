@@ -344,6 +344,7 @@ section {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    width: 90%;
 }
 
 .portfolio-box img {
