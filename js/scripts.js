@@ -150,12 +150,10 @@ function checkScreenSize() {
     }
 }
 
-const openModal = document.getElementById('open-modal');
-
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.querySelectorAll(".portfolio-layer a");
+    const anchorTags = document.getElementById("open-modal");
 
     // Debugging: Check if anchorTags are being selected
     console.log("Anchor tags :", anchorTags);
