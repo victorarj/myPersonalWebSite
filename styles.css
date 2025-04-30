@@ -494,6 +494,7 @@ section {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    transition: .5s ease;
 }
 
 .modal-content {
@@ -506,6 +507,7 @@ section {
     width: 70%;
     color: var(--text-color);
     position: relative;
+    transition: .5s ease;
 }
 
 .close-btn {
@@ -526,6 +528,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    transition: .5s ease;
 }
 
 .service-item {
