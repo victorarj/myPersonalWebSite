@@ -497,10 +497,9 @@ section {
     background: var(--second-bg-color);
     padding: 2rem;
     border-radius: 1rem;
+    font-size: medium;
     text-align: center;
     color: var(--text-color);
-    width: 80%;
-    max-width: 500px;
     position: relative;
 }
 
@@ -517,6 +516,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    margin-top: 20px;
     gap: 2rem;
     padding: 1rem 0;
 }
