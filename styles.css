@@ -524,7 +524,7 @@ section {
 .service-item {
     padding-bottom: 0.5rem;
     width: 100%;
-    height: 300px;
+    height: 125px;
     transition: .5s ease;
 }
 
