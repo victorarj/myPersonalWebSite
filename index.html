@@ -153,7 +153,7 @@ With a passion for continuous learning, I hold certifications in Platform Develo
                 <i class='bx bx-cloud-lightning' ></i>
                 <h3>Bundle</h3>
                 <p>Get powerful service bundles designed to accelerate your growth — combining solutions that work better together for maximum impact.</p>
-                <a href="#" class="btn">Read More</a>
+                <a href="javascript:void(0)" class="open-modal">Read More</a>
             </div>
         </div>
     </section>
@@ -372,7 +372,97 @@ With a passion for continuous learning, I hold certifications in Platform Develo
                 ]
             }
         ];
-    
+            
+        const bundles = [
+            {
+                "bundleName": "Startup Empowerment Package",
+                "description": "Aimed at startups looking to establish a strong foundation with Salesforce, this package includes essential services for initial setup and training.",
+                "services": [
+                    {
+                        "service": "Salesforce Configuration & Customization",
+                        "pricing": "100 - 200 per hour"
+                    },
+                    {
+                        "service": "Salesforce User Training",
+                        "pricing": "80 - 150 per hour"
+                    },
+                    {
+                        "service": "Custom Reports and Dashboards",
+                        "pricing": "60 - 100 per hour"
+                    }
+                ],
+                "totalPrice": "Variable based on service hours"
+            },
+            {
+                "bundleName": "Growth Optimization Package",
+                "description": "Designed for growing businesses to optimize their workflows and maximize efficiency through automation and consulting.",
+                "services": [
+                    {
+                        "service": "Business Process Analysis",
+                        "pricing": "100 - 180 per hour"
+                    },
+                    {
+                        "service": "Workflow Design & Automation",
+                        "pricing": "80 - 150 per hour"
+                    },
+                    {
+                        "service": "Health Check and Optimization",
+                        "pricing": "100 - 200 per assessment"
+                    }
+                ],
+                "totalPrice": "Variable based on service hours"
+            },
+            {
+                "bundleName": "AI Integration Package",
+                "description": "Perfect for businesses looking to leverage AI for enhanced functionality, embedding advanced technologies into existing systems.",
+                "services": [
+                    {
+                        "service": "AI-Based Solutions Development",
+                        "pricing": "100 - 200 per hour"
+                    },
+                    {
+                        "service": "Integration of AI Tools",
+                        "pricing": "100 - 180 per hour"
+                    }
+                ],
+                "totalPrice": "Variable based on service hours"
+            },
+            {
+                "bundleName": "Comprehensive Marketing Suite",
+                "description": "A full-service package catering to marketing needs, ensuring seamless integration and automation of marketing efforts.",
+                "services": [
+                    {
+                        "service": "Development of Automation Workflows",
+                        "pricing": "80 - 150 per hour"
+                    },
+                    {
+                        "service": "Integration with Marketing Tools",
+                        "pricing": "100 - 180 per hour"
+                    },
+                    {
+                        "service": "Marketing Content Development",
+                        "pricing": "70 - 120 per hour"
+                    }
+                ],
+                "totalPrice": "Variable based on service hours"
+            },
+            {
+                "bundleName": "Ongoing Support Package",
+                "description": "For businesses requiring continual support and maintenance, this package ensures their systems remain functional and updated.",
+                "services": [
+                    {
+                        "service": "Ongoing Salesforce Support",
+                        "pricing": "60 - 100 per hour"
+                    },
+                    {
+                        "service": "Regular System Updates",
+                        "pricing": "80 - 150 per hour"
+                    }
+                ],
+                "totalPrice": "Variable based on service hours"
+            }
+        ];
+
         document.addEventListener("DOMContentLoaded", () => {
             const modal = document.getElementById("modal");
             const closeBtn = document.querySelector(".close-btn");
@@ -404,7 +494,7 @@ With a passion for continuous learning, I hold certifications in Platform Develo
 
             function handleSwipeGesture() {
                 const swipeDistance = touchEndY - touchStartY;
-                if (swipeDistance > 100) { // 100px swipe down
+                if (swipeDistance > 100) { 
                     closeModalWithAnimation();
                 }
             }
@@ -412,30 +502,39 @@ With a passion for continuous learning, I hold certifications in Platform Develo
             function updateModalContent(categoryName) {
                 modalTitle.textContent = categoryName;
     
-                // Clear previous content
                 modalServicesContainer.innerHTML = "";
     
-                // Find the matching category in pricingTable
                 const category = pricingTable.find(cat => cat.serviceCategory === categoryName);
-                if (!category) {
-                    modalServicesContainer.innerHTML = "<p>No services found for this category.</p>";
-                    return;
+                if (category) {
+                    category.services.forEach(service => {
+                        const serviceDiv = document.createElement("div");
+                        serviceDiv.classList.add("service-item");
+                        serviceDiv.innerHTML = `
+                            <h3>${service.service}</h3>
+                            <p>${service.description}</p>
+                            <p><strong>Pricing:</strong> ${service.pricing}</p>
+                        `;
+                        modalServicesContainer.appendChild(serviceDiv);
+                    });
+                } else {
+                    bundles.forEach(bundle => {
+                        const serviceDiv = document.createElement("div");
+                        serviceDiv.classList.add("service-item");
+                        serviceDiv.innerHTML = `
+                            <h3>${bundle.bundleName}</h3>
+                            <p>${bundle.description}</p>
+                        `;
+                        bundle.services.forEach(service => {
+                            serviceDiv.innerHTML += `
+                                <h3>${service.service}</h3>
+                                <p><strong>Pricing:</strong> ${service.pricing}</p>
+                            `;
+                        });
+                        modalServicesContainer.appendChild(serviceDiv);
+                    });
                 }
-    
-                // Render each service
-                category.services.forEach(service => {
-                    const serviceDiv = document.createElement("div");
-                    serviceDiv.classList.add("service-item");
-                    serviceDiv.innerHTML = `
-                        <h3>${service.service}</h3>
-                        <p>${service.description}</p>
-                        <p><strong>Pricing:</strong> ${service.pricing}</p>
-                    `;
-                    modalServicesContainer.appendChild(serviceDiv);
-                });
             }
     
-            // Attach listeners
             anchorTags.forEach(anchor => {
                 anchor.addEventListener("click", (e) => {
                     e.preventDefault();
@@ -464,6 +563,5 @@ With a passion for continuous learning, I hold certifications in Platform Develo
             }
         });
     </script>
-    
 </body>
 </html>
