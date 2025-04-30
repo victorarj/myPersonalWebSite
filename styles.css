@@ -515,7 +515,9 @@ section {
 
 .services-modal-grid {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
     padding: 1rem 0;
 }
 
