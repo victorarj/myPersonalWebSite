@@ -529,21 +529,40 @@ section {
 
 .services-modal-grid {
     display: flex;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 20px;
-    gap: 2rem;
-    padding: 1rem 0;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem 0;
+    justify-content: flex-start;
 }
 
 .service-item {
-    padding-bottom: 0.5rem;
-    height: 125px;
     flex: 1 1 calc(33.333% - 2rem);
-    transition: 0.5s ease;
     box-sizing: border-box;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.8rem;
+    text-align: left;
+}
+
+.service-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+}
+
+.service-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.service-item p {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: #ccc;
+}
+
+.service-item strong {
+    color: var(--main-color);
 }
 
 /* KEYFRAMES ANIMATION */
@@ -793,7 +812,11 @@ section {
     .services-modal-grid {
         gap: 5rem;
         flex-direction: column;
-        overflow-y: scroll;
-        height: 500px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
     }
 }
