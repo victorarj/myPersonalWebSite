@@ -153,9 +153,8 @@ function checkScreenSize() {
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.querySelectorAll(".open-modal"); // Use class for multiple anchors
+    const anchorTags = document.querySelectorAll(".open-modal");
 
-    // Function to update modal content dynamically
     function updateModalContent(title, content) {
         const modalTitle = modal.querySelector("h2");
         const modalContent = modal.querySelector("p");
@@ -163,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
         modalContent.textContent = content;
     }
 
-    // Attach click listener to all anchor tags
     anchorTags.forEach(anchor => {
         anchor.addEventListener("click", (e) => {
             e.preventDefault();
@@ -175,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close modal logic
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
     });
