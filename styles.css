@@ -513,6 +513,17 @@ section {
     cursor: pointer;
 }
 
+.services-modal-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.service-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
 /* KEYFRAMES ANIMATION */
 
 @keyframes slideRight {

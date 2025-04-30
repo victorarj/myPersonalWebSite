@@ -150,40 +150,6 @@ function checkScreenSize() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("modal");
-    const closeBtn = document.querySelector(".close-btn");
-    const anchorTags = document.querySelectorAll(".open-modal");
-
-    function updateModalContent(title, content) {
-        const modalTitle = modal.querySelector("h2");
-        const modalContent = modal.querySelector("p");
-        modalTitle.textContent = title;
-        modalContent.textContent = content;
-    }
-
-    anchorTags.forEach(anchor => {
-        anchor.addEventListener("click", (e) => {
-            e.preventDefault();
-            const titleElement = anchor.closest(".portfolio-layer")?.querySelector("h4");
-            const title = titleElement ? titleElement.textContent : "Default Title";
-            const content = "This is dynamic content for " + title + ". Customize as needed.";
-            updateModalContent(title, content);
-            modal.style.display = "flex";
-        });
-    });
-
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});
-
 // Call the function on page load and on window resize
 checkScreenSize();
 window.addEventListener('resize', checkScreenSize);
