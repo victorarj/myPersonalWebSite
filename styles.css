@@ -513,6 +513,10 @@ section {
     cursor: pointer;
 }
 
+.open-modal {
+    
+}
+
 /* KEYFRAMES ANIMATION */
 
 @keyframes slideRight {

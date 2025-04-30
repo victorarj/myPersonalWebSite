@@ -159,6 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.querySelector(".close-btn");
     const anchorTags = document.querySelectorAll(".portfolio-layer a.open-modal");
 
+    // Debugging: Check if anchorTags are being selected
+    console.log("Anchor tags with 'open-modal' class:", anchorTags);
+
     // Function to update modal content dynamically
     function updateModalContent(title, content) {
         const modalTitle = modal.querySelector("h2");
@@ -175,18 +178,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const content = "This is dynamic content for " + title + ". Customize as needed.";
             updateModalContent(title, content);
             modal.style.display = "flex"; // Show the modal
+            console.log("Modal opened with title:", title); // Debugging
         });
     });
 
     // Close modal when the close button is clicked
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none"; // Hide the modal
+        console.log("Modal closed"); // Debugging
     });
 
     // Close modal when clicking outside the modal content
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none"; // Hide the modal
+            console.log("Modal closed by clicking outside"); // Debugging
         }
     });
 });
