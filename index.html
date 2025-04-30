@@ -380,6 +380,34 @@ With a passion for continuous learning, I hold certifications in Platform Develo
     
             const modalTitle = modal.querySelector("h2");
             const modalServicesContainer = document.getElementById("modal-services-container");
+
+            let touchStartY = 0;
+            let touchEndY = 0;
+
+            modal.addEventListener("touchstart", (e) => {
+                touchStartY = e.changedTouches[0].screenY;
+            });
+
+            modal.addEventListener("touchend", (e) => {
+                touchEndY = e.changedTouches[0].screenY;
+                handleSwipeGesture();
+                modal.querySelector(".modal-content").style.transform = "translateY(0)";
+            });
+
+            modal.addEventListener("touchmove", (e) => {
+                const moveY = e.changedTouches[0].screenY;
+                const offset = moveY - touchStartY;
+                if (offset > 0 && offset < 150) {
+                    modal.querySelector(".modal-content").style.transform = `translateY(${offset}px)`;
+                }
+            });
+
+            function handleSwipeGesture() {
+                const swipeDistance = touchEndY - touchStartY;
+                if (swipeDistance > 100) { // 100px swipe down
+                    closeModalWithAnimation();
+                }
+            }
     
             function updateModalContent(categoryName) {
                 modalTitle.textContent = categoryName;
@@ -418,22 +446,22 @@ With a passion for continuous learning, I hold certifications in Platform Develo
             });
     
             closeBtn.addEventListener("click", () => {
+                closeModalWithAnimation();
+            });
+    
+            window.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    closeModalWithAnimation();
+                }
+            });
+
+            function closeModalWithAnimation() {
                 modal.classList.add("closing");
                 setTimeout(() => {
                     modal.style.display = "none";
                     modal.classList.remove("closing");
                 }, 300);
-            });
-    
-            window.addEventListener("click", (e) => {
-                if (e.target === modal) {
-                    modal.classList.add("closing");
-                    setTimeout(() => {
-                        modal.style.display = "none";
-                        modal.classList.remove("closing");
-                    }, 300);
-                }
-            });
+            }
         });
     </script>
     
