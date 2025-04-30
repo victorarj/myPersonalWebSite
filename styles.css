@@ -517,6 +517,13 @@ section {
     font-size: 2rem;
     color: var(--text-color);
     cursor: pointer;
+}
+
+.modal.closing {
+    animation: fadeOutBackground 0.3s forwards;
+}
+
+.modal.closing .modal-content {
     animation: modalHide 0.3s ease forwards;
 }
 
@@ -540,6 +547,11 @@ section {
 }
 
 /* KEYFRAMES ANIMATION */
+@keyframes fadeOutBackground {
+    0% { background: rgba(0, 0, 0, 0.8); }
+    100% { background: rgba(0, 0, 0, 0.0); }
+}
+
 @keyframes modalHide {
     0% {
         opacity: 1;
