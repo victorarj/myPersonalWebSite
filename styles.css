@@ -508,6 +508,18 @@ section {
     color: var(--text-color);
     position: relative;
     animation: modalReveal 0.4s ease-out;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
 }
 
 .close-btn {
@@ -812,8 +824,6 @@ section {
     .services-modal-grid {
         gap: 5rem;
         flex-direction: column;
-        max-height: 80vh;
-        overflow-y: auto;
     }
 
     .service-item {
