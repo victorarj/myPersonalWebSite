@@ -122,7 +122,8 @@ function showSuccessMessage() {
     }, 3000); // Hide after 3 seconds 
 }
 
-const downloadBtn = document.getElementById('download-btn');
+// Uncomment the following lines if you want to enable the download button functionality
+/* const downloadBtn = document.getElementById('download-btn');
 
 downloadBtn.addEventListener('click', function(event) {
     event.preventDefault();
@@ -132,7 +133,7 @@ downloadBtn.addEventListener('click', function(event) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-});
+}); */
 
 // Function to check screen size and adjust behavior
 function checkScreenSize() {
