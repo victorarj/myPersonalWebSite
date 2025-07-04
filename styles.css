@@ -255,6 +255,7 @@ section {
 
 .about-image img {
     width: 35vw;
+    border-radius: 5rem;
 }
 
 .heading {
