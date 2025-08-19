@@ -889,6 +889,10 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .portfolio-container .portfolio-box {
+        width: 100%;
+    }
+
     .footer {
         flex-direction: column;
         text-align: center;
