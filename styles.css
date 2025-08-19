@@ -806,6 +806,14 @@ section {
         width: 130px;
     }
 
+    .lang-switcher {
+        margin-left: 0;
+    }
+
+    .lang-list {
+        top: calc(20% + 5px);
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
