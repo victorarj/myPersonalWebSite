@@ -802,6 +802,10 @@ section {
         display: inline-block;
     }
 
+    .logo {
+        width: 130px;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
