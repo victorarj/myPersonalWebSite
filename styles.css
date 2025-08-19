@@ -86,11 +86,6 @@ section {
     display: none;
 }
 
-.lang-switcher {
-  position: relative;
-  margin-left: 18px;
-}
-
 .lang-btn {
   display: inline-flex;
   align-items: center;
