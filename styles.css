@@ -350,6 +350,11 @@ section {
     text-align: justify;
 }
 
+.about-content .btn {
+    position: relative;
+    left: 45%;
+}
+
 .services h2 {
     margin-bottom: 5rem;
 }
