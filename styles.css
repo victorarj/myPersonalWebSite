@@ -192,9 +192,9 @@ section {
     max-width: 380px;
     object-fit: cover;
     position: absolute;
-    left: 50%;
+    left: 85%;
     transform: translateX(-50%);
-    /* top: 10px; */
+    scale: 1.7;
 }
 
 .social-media a {
