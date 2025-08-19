@@ -188,6 +188,12 @@ section {
     animation-delay: 1s;
 }
 
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 .home-img {
     width: 410px;
     height: 410px;
