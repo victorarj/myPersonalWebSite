@@ -851,8 +851,9 @@ section {
     }
 
     .home-img {
-        margin-top: 6rem;
-        padding: 1rem;
+        position: relative;
+        top: 70px;
+        left: 18%;
     }
     
     .home-img .glowing-circle {
