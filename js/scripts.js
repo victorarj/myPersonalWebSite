@@ -155,7 +155,6 @@ function checkScreenSize() {
 checkScreenSize();
 window.addEventListener('resize', checkScreenSize);
 
-<script>
   // i18n dictionary
   const I18N = {
     "en": {
@@ -220,4 +219,3 @@ window.addEventListener('resize', checkScreenSize);
 
   // Init from storage (default EN)
   applyLang(localStorage.getItem('lang') || 'en');
-</script>
