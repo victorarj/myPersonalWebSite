@@ -154,3 +154,70 @@ function checkScreenSize() {
 // Call the function on page load and on window resize
 checkScreenSize();
 window.addEventListener('resize', checkScreenSize);
+
+<script>
+  // i18n dictionary
+  const I18N = {
+    "en": {
+      "nav.home": "Home",
+      "nav.about": "About Us",
+      "nav.services": "Services",
+      "nav.products": "Products",
+      "nav.contacts": "Contacts"
+    },
+    "pt-pt": {
+      "nav.home": "Início",
+      "nav.about": "Sobre Nós",
+      "nav.services": "Serviços",
+      "nav.products": "Produtos",
+      "nav.contacts": "Contactos"
+    },
+    "pt-br": {
+      "nav.home": "Início",
+      "nav.about": "Sobre Nós",
+      "nav.services": "Serviços",
+      "nav.products": "Produtos",
+      "nav.contacts": "Contatos"
+    }
+  };
+
+  const langToggle = document.getElementById('lang-toggle');
+  const langList   = document.getElementById('lang-list');
+  const langCurrent= document.getElementById('lang-current');
+
+  function applyLang(lang) {
+    const dict = I18N[lang] || I18N['en'];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    langCurrent.textContent = (lang === 'pt-pt') ? 'PT-PT' : (lang === 'pt-br' ? 'PT-BR' : 'EN');
+    localStorage.setItem('lang', lang);
+  }
+
+  function toggleDropdown(open) {
+    const shouldOpen = (open !== undefined) ? open : !langList.classList.contains('open');
+    langList.classList.toggle('open', shouldOpen);
+    langToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+  }
+
+  // Events
+  langToggle.addEventListener('click', () => toggleDropdown());
+  langList.addEventListener('click', (e) => {
+    const li = e.target.closest('[data-lang]');
+    if (!li) return;
+    applyLang(li.getAttribute('data-lang'));
+    toggleDropdown(false);
+  });
+
+  // Close on outside click / ESC
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-switcher')) toggleDropdown(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') toggleDropdown(false);
+  });
+
+  // Init from storage (default EN)
+  applyLang(localStorage.getItem('lang') || 'en');
+</script>
