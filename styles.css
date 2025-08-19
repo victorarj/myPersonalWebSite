@@ -87,7 +87,7 @@ section {
 }
 
 .lang-switcher {
-  position: relative;
+  display: inline-block;
   margin-left: 18px;
 }
 
@@ -108,8 +108,7 @@ section {
 
 .lang-list {
   position: absolute;
-  right: 0;
-  top: calc(100% + 6px);
+  top: calc(75% + 5px);
   background: #1f252d;
   border: 1px solid #2b323c;
   border-radius: 10px;
