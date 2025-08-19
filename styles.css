@@ -876,6 +876,10 @@ section {
         max-width: 220px;
     }
 
+    .social-media a {
+        margin: 30px 15px;
+    }
+
     .about {
         flex-direction: column;
         height: 100%;
