@@ -917,7 +917,12 @@ section {
 
     .footer {
         flex-direction: column;
+        gap: 5px;
         text-align: center;
+    }
+
+    .footer-text {
+        max-width: 80%;
     }
 
     .footer-text p {
