@@ -885,6 +885,11 @@ section {
         height: 100%;
     }
 
+    .about-content .btn {
+        position: relative;
+        left: 28%;
+    }
+
     .portfolio-container {
         grid-template-columns: 1fr;
     }
