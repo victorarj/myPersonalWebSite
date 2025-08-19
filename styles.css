@@ -896,6 +896,11 @@ section {
     .about {
         flex-direction: column;
         height: 100%;
+        padding: 20px 0px;
+    }
+
+    .about-content {
+        width: 90%;
     }
 
     .about-content .btn {
