@@ -918,6 +918,7 @@ section {
 
     .portfolio-container {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
 
     .portfolio-container .portfolio-box {
